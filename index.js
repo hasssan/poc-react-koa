@@ -1,29 +1,26 @@
-var koa = require('koa')();
+var app = require('koa')();
 
-koa.use(function* (next) {
-    //do something before yielding/passing to next generator function in line which will be 1st event in downstream
-    console.log("A");
-    yield next;
+app.use(function* () {
+  const req = this.request;
+  const path = req.path;
+  const type = req.type;
+  const charset = req.charset;
+  const query = req.query;
+  const ip = req.ip;
 
-    // do something when the execution returns upstream, this will be last event in upstream
-    console.log("B");
+  this.body = `
+    <html>
+    <title>POC Koa+React</title>
+    <body>
+      path: ${path}<br />
+      query: ${query.query}<br />
+      type: ${type}<br />
+      charset: ${charset}<br />
+      ip: ${ip}<br />
+    </body>
+    </html>
+  `;
 });
 
-koa.use(function* (next) {
-    // do something before yielding/passing to the next generator function in line, this shall be 2nd event downstream
-    console.log("C");
-
-    yield next;
-
-    // do something when the execution returns upstream and this would be 2nd event upstream
-    console.log("D");
-});
-
-koa.use(function* () { // do something before yielding/passing to next generator function in line. Here it would be last function downstream
-    console.log("E");
-    this.body = "hey guys";
-    console.log("F"); // First event of upstream (from the last to first)
-
-});
-
-koa.listen(3000);
+app.listen(3000);
+console.log('listening http://localhost:3000/');
