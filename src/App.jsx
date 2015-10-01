@@ -13,12 +13,11 @@ const App = React.createClass({
   render() {
     return (
       <div className="container">
-        <h1>React Apps</h1>
+        <h1>POC Koa+React</h1>
         <div className="row">
           <div className="col-sm-12">
-            <h1>{this.state.counter}</h1>
             <button type="button" onClick={this.onClick} className="btn btn-default">
-              Counter
+              Counter {this.state.counter}
             </button>
           </div>
         </div>

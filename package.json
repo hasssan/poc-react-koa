@@ -1,6 +1,6 @@
 {
-  "name": "poc-koa",
-  "version": "0.1.0",
+  "name": "poc-koa-react",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
