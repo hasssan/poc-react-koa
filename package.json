@@ -1,0 +1,26 @@
+{
+  "name": "poc-koa-react",
+  "version": "1.0.0",
+  "description": "Proof of concept universal application with React and Koa.",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon",
+    "watch": "webpack --watch",
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hassan Aly <surel@hasssan.com>",
+  "license": "MIT",
+  "dependencies": {
+    "babel": "^5.8.23",
+    "koa": "^1.0.0",
+    "koa-static": "^1.4.9",
+    "react": "^0.14.0-rc1",
+    "react-dom": "^0.14.0-rc1"
+  },
+  "devDependencies": {
+    "babel-loader": "^5.3.2",
+    "babel-runtime": "^5.8.25",
+    "webpack": "^1.12.2"
+  }
+}
