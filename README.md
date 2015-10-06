@@ -18,7 +18,10 @@ npm run watch
 
 Open `http://localhost:3000`
 
-## License
+### Reference
+- https://github.com/davezuko/react-redux-starter-kit/tree/v0.14.0
+
+### MIT License
 
 Copyright (c) 2015 Hassan Aly
 
