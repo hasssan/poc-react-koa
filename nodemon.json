@@ -6,11 +6,11 @@
   ],
   "verbose": true,
   "execMap": {
-    "js": "node --harmony"
+    "js": "node --harmony bin/server"
   },
   "watch": [
-    "src",
-    "index.js"
+    "server",
+    "dist"
   ],
   "env": {
     "NODE_ENV": "development"
