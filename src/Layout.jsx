@@ -1,4 +1,5 @@
 import React from 'react';
+import Nav from './Nav';
 
 export default class Layout extends React.Component {
   static propTypes = {
@@ -9,6 +10,7 @@ export default class Layout extends React.Component {
     return (
       <div className="container">
         <h1>POC Koa+React</h1>
+        <Nav />
           {this.props.children}
       </div>
     );
