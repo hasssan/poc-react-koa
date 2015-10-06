@@ -1,6 +1,6 @@
 {
   "name": "poc-koa-react",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Proof of concept universal application with React and Koa.",
   "main": "index.js",
   "scripts": {
